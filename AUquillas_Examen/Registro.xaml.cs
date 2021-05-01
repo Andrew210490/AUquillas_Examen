@@ -52,30 +52,8 @@ namespace AUquillas_Examen
 
         private async void Guardar_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-                String usuario = Convert.ToString(lblUsuario.Text);
-                String nombre= Convert.ToString(txtNombre.Text);
-                String apellido= Convert.ToString(txtApellido.Text);
-                
-                if (string.IsNullOrEmpty(txtMontoInicial.Text))
-                {
-                    await DisplayAlert("Error", "Debe ingresar un monto inicial", "Ok");
-                }
-                else
-                {
-                    bool opcion = await DisplayAlert("Confirmación", "¿Está deacuerdo con la cuota a pagar mensualmente?", "Si", "No");
-                    if (opcion == true)
-                    {
-                        await DisplayAlert("Alerta", "Elemento guardado con exito.", "OK");
-                        await Navigation.PushModalAsync(new Resumen(usuario,nombre,apellido));
-                    }
-                }
-            }
-            catch (Exception exc)
-            {
-                DisplayAlert("Alerta", exc.Message, "Ok");
-            }
+            await DisplayAlert("Alerta", "Elemento guardado con éxito","Ok");
+            await Navigation.PushModalAsync(new Resumen(txtNombre.Text, txtApellido.Text, txtCuota.Text,lblUsuario.Text,txtMontoInicial.Text));
         }
     }
 }

@@ -12,14 +12,21 @@ namespace AUquillas_Examen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(String Nombre, String Apellido,String Usuario)
+        public Resumen(String Nombre, String Apellido, String Cuota,String Usuario,String montoInicial)
         {
             InitializeComponent();
-            lblUsuario.Text = Usuario;
+            
             txtNombre.Text = Nombre;
             txtApellido.Text = Apellido;
-            
+            lblUsuarioR.Text = Usuario;
+            txtCuota.Text = Cuota;
 
+            Double valorCuota= Convert.ToDouble(Cuota);
+            Double valorInicial = Convert.ToDouble(montoInicial);
+            Double valorTotal = 0;
+
+            valorTotal = (valorCuota * 3) + valorInicial;
+            txtTotal.Text = Convert.ToString(valorTotal);
         }
     }
 }

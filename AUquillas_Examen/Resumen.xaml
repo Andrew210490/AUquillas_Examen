@@ -4,20 +4,24 @@
              x:Class="AUquillas_Examen.Resumen">
     <ContentPage.Content>
         <StackLayout>
+            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+            <Label Text="Resumen" FontSize="20" HorizontalTextAlignment="Center"/>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="**" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                  </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="lblUsuario" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"/>
+                <Label x:Name="lblUsuarioR" Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center"/>
                 <Label x:Name="lblNombre" Grid.Row="1" Grid.Column="0" Text="Nombre" VerticalTextAlignment="Center"/>
                 <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
                 <Label x:Name="lblApellido" Grid.Row="2" Grid.Column="0" Text="Apellido" VerticalTextAlignment="Center"/>
                 <Entry x:Name="txtApellido" Grid.Row="2" Grid.Column="1" IsReadOnly="True"/>
+                <Label x:Name="lblCuota" Grid.Row="3" Grid.Column="0" Text="Cuota mensual" VerticalTextAlignment="Center"/>
+                <Entry x:Name="txtCuota" Grid.Row="3" Grid.Column="1" IsReadOnly="True"/>
                 
                 
                 <Label Text="El valor total a pagar es: " Grid.Row="4" Grid.Column="0" VerticalTextAlignment="Center"/>
@@ -25,6 +29,7 @@
 
 
             </Grid>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
