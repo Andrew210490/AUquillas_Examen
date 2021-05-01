@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AUquillas_Examen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+            <Label Text="Registro" FontSize="20" HorizontalTextAlignment="Center"/>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblUsuario" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="0" Placeholder="Ingrese su nombre"/>
+                <Entry x:Name="txtApellido" Grid.Row="1" Grid.Column="1" Placeholder="Ingrese su apellido"/>
+                <Entry x:Name="txtMontoInicial" Grid.Row="2" Grid.Column="0" Placeholder="Ingrese el monto inicial" />
+                <Button x:Name="bntCalcular" Grid.Row="4" Grid.Column="1" Clicked="bntCalcular_Clicked" Text="Calcular"/>
+                <Label Text="El valor de su cuota es: " Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"/>
+                <Entry x:Name="txtCuota" Grid.Row="3" Grid.Column="1" IsReadOnly="True"/>
+            </Grid>
+            <Button x:Name="Guardar" Text="Guardar" Clicked="Guardar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

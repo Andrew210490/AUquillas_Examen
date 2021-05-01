@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AUquillas_Examen.MainPage">
+
+    <StackLayout>
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+        <Label Text="Login" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Label Text="Andrés Uquillas Examen" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario"/>
+        <Entry x:Name="txtPsdw" Placeholder="Ingrese la contraseña" IsPassword="True"/>
+        <Button x:Name="bntIngresar" Text="Ingresar" Clicked="bntIngresar_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
